@@ -42,6 +42,8 @@ const shootCollided = (event) => {
     myScene.removeChild(event.detail.body.el);
     oldAmong.setAttribute("visible", false);
     newAmong.setAttribute("visible", true);
+    const killAudio = new Audio("assets/kill.mp3");
+    killAudio.play();
   }
   if (document.querySelectorAll(".target").length === 0) {
     console.log("You win!");
