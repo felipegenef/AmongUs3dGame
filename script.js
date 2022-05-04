@@ -1,4 +1,19 @@
-let nextLevel = "index.html";
+let currentCounter = 61;
+const counterTimer = setInterval(() => {
+  currentCounter--;
+  const counterElement = document.getElementById("counter");
+  counterElement.setAttribute(
+    "text",
+    `width:50;value:Kill them All in ${currentCounter}s;color:#c19f9f;height:100`
+  );
+  if (currentCounter == 0) {
+    counterElement.setAttribute(
+      "text",
+      `width:50;value:You Lost!;color:#c19f9f;height:100`
+    );
+    clearInterval(counterTimer);
+  }
+}, 1000);
 
 const shoot = () => {
   const bullet = document.createElement("a-sphere");
@@ -32,6 +47,12 @@ const shootCollided = (event) => {
   }
   if (document.querySelectorAll(".target").length === 0) {
     console.log("You win!");
+    const counterElement = document.getElementById("counter");
+    counterElement.setAttribute(
+      "text",
+      `width:50;value:You Won!;color:#c19f9f;height:100`
+    );
+    clearInterval(counterTimer);
   }
 };
 
