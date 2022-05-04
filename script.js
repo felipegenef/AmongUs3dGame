@@ -6,7 +6,7 @@ const shoot = () => {
   bullet.setAttribute("position", pos);
   bullet.setAttribute("velocity", getDirection(myCamera, 50));
   bullet.setAttribute("dynamic-body", true);
-  bullet.setAttribute("radius", 0.001);
+  bullet.setAttribute("radius", 0.00001);
   bullet.setAttribute("src", "");
   bullet.setAttribute("transparent", true);
   myScene.appendChild(bullet);
@@ -24,6 +24,8 @@ const shootCollided = (event) => {
     const id = event.detail.body.el.id;
     const oldAmong = document.getElementById("among" + id);
     const newAmong = document.getElementById("amongDead" + id);
+    console.log(oldAmong);
+    console.log(newAmong);
     myScene.removeChild(event.detail.target.el);
     myScene.removeChild(event.detail.body.el);
     myScene.removeChild(oldAmong);
