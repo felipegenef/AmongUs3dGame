@@ -151,23 +151,7 @@ document.onkeydown = (event) => {
     const startAudio = new Audio("assets/start.mp3");
     startAudio.play();
   }
-  if (
-    event.which == 65 ||
-    event.which == 68 ||
-    event.which == 87 ||
-    event.which == 83
-  ) {
-    if (!isWalkingAudioOn) {
-      isWalkingAudioOn = true;
-      console.log(isWalkingAudioOn);
-      const walk = new Audio("assets/walking.mp3");
-      walk.play();
-    }
 
-    setTimeout(() => {
-      isWalkingAudioOn = false;
-    }, 5000);
-  }
   if (restarWithKey) window.location.reload();
   if (event.which == 32) {
     shoot();
