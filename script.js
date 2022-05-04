@@ -103,11 +103,11 @@ const won = () => {
   const Among3 = document.getElementById("among3");
   const Among4 = document.getElementById("among4");
   const Among5 = document.getElementById("among5");
-  AmongDead1.setAttribute("visible", false);
-  AmongDead2.setAttribute("visible", false);
-  AmongDead3.setAttribute("visible", false);
-  AmongDead4.setAttribute("visible", false);
-  AmongDead5.setAttribute("visible", false);
+  AmongDead1.setAttribute("visible", true);
+  AmongDead2.setAttribute("visible", true);
+  AmongDead3.setAttribute("visible", true);
+  AmongDead4.setAttribute("visible", true);
+  AmongDead5.setAttribute("visible", true);
   Among1.setAttribute("visible", false);
   Among2.setAttribute("visible", false);
   Among3.setAttribute("visible", false);
