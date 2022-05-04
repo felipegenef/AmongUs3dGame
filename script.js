@@ -6,7 +6,7 @@ const shoot = () => {
   bullet.setAttribute("position", pos);
   bullet.setAttribute("velocity", getDirection(myCamera, 50));
   bullet.setAttribute("dynamic-body", true);
-  bullet.setAttribute("radius", 0.1);
+  bullet.setAttribute("radius", 0.001);
   bullet.setAttribute("src", "");
   bullet.setAttribute("transparent", true);
   myScene.appendChild(bullet);
