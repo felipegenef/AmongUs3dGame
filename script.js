@@ -144,6 +144,7 @@ const won = () => {
   wonAudio.play();
   restarWithKey = true;
 };
+let isWalkingAudioOn = false;
 document.onkeydown = (event) => {
   if (first) {
     first = false;
@@ -156,11 +157,17 @@ document.onkeydown = (event) => {
     event.which == 87 ||
     event.which == 83
   ) {
-    const walk = new Audio("assets/walking.mp3");
-    walk.play();
+    if (!isWalkingAudioOn) {
+      isWalkingAudioOn = true;
+      const walk = new Audio("assets/walking.mp3");
+      walk.play();
+    }
+
+    setTimeout(() => {
+      isWalkingAudioOn = false;
+    }, 500);
   }
   if (restarWithKey) window.location.reload();
-  console.log({ event: event.which });
   if (event.which == 32) {
     shoot();
   }
