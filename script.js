@@ -1,5 +1,6 @@
 let currentCounter = 121;
 let restarWithKey = false;
+let first = true;
 const counterTimer = setInterval(() => {
   currentCounter--;
   const counterElement = document.getElementById("counter");
@@ -11,8 +12,7 @@ const counterTimer = setInterval(() => {
     lost();
   }
 }, 1000);
-const startAudio = new Audio("assets/start.mp3");
-startAudio.play();
+
 const shoot = () => {
   const bullet = document.createElement("a-sphere");
   let pos = myCamera.getAttribute("position");
@@ -143,6 +143,11 @@ const won = () => {
   restarWithKey = true;
 };
 document.onkeydown = (event) => {
+  if (first) {
+    first = false;
+    const startAudio = new Audio("assets/start.mp3");
+    startAudio.play();
+  }
   if (restarWithKey) window.location.reload();
   console.log({ event: event.which });
   if (event.which == 32) {
