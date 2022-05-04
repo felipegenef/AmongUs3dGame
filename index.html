@@ -11,6 +11,8 @@
       <a-assets>
         <img id="texture" src="images/janelasCafeteria.png" />
         <img id="icon" src="images/icon.jpg" />
+        <a-asset-item id="red-o" src="assets/amongus.obj"></a-asset-item>
+        <a-asset-item id="red-m" src="assets/amongus.mtl"></a-asset-item>
       </a-assets>
       <a-entity environment="preset:starry;"></a-entity>
       <a-plane
@@ -25,14 +27,18 @@
       <a-camera id="myCamera" position="0 1 0">
         <a-cursor intersection-spawn="event: click; mixin: voxel"></a-cursor>
       </a-camera>
-      <a-box
+      <a-entity
+        obj-model="obj: #red-o; mtl: #red-m"
+        position="22.91 1.155 -17.005"
+      ></a-entity>
+      <!-- <a-box
         static-body
         class="target"
         color="white"
         radius="1"
         heigth="10"
         position="22.91 1.155 -17.005"
-      ></a-box>
+      ></a-box> -->
       <a-box
         static-body
         class="target"
