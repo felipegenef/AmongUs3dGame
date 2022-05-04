@@ -39,7 +39,7 @@ const shootCollided = (event) => {
 
     myScene.removeChild(event.detail.target.el);
     myScene.removeChild(event.detail.body.el);
-    myScene.removeChild(oldAmong);
+    oldAmong.setAttribute("visible", false);
     newAmong.setAttribute("visible", true);
   }
   if (document.querySelectorAll(".target").length === 0) {
