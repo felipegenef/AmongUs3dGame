@@ -159,13 +159,14 @@ document.onkeydown = (event) => {
   ) {
     if (!isWalkingAudioOn) {
       isWalkingAudioOn = true;
+      console.log(isWalkingAudioOn);
       const walk = new Audio("assets/walking.mp3");
       walk.play();
     }
 
     setTimeout(() => {
       isWalkingAudioOn = false;
-    }, 2000);
+    }, 5000);
   }
   if (restarWithKey) window.location.reload();
   if (event.which == 32) {
