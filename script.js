@@ -125,7 +125,7 @@ const won = () => {
   AmongDead3.setAttribute("rotation", "0 15.000 0");
   AmongDead4.setAttribute("rotation", "0 -10.000 0");
   AmongDead5.setAttribute("rotation", "0 -41.000 0");
-
+  console.log(AmongDead1, AmongDead2, AmongDead3, AmongDead4, AmongDead5);
   const counterElement = document.getElementById("counter");
   counterElement.setAttribute("position", "23.325 9.272 -35.792");
   counterElement.setAttribute(
