@@ -11,7 +11,8 @@ const counterTimer = setInterval(() => {
     lost();
   }
 }, 1000);
-
+const startAudio = new Audio("assets/start.mp3");
+startAudio.play();
 const shoot = () => {
   const bullet = document.createElement("a-sphere");
   let pos = myCamera.getAttribute("position");
@@ -89,6 +90,8 @@ const lost = () => {
   clearInterval(counterTimer);
   myCamera.setAttribute("position", "1.180 2.600 -1.359");
   myCamera.setAttribute("rotation", "-8.480 -723.760 0.000");
+  const loseAudio = new Audio("assets/lose.mp3");
+  loseAudio.play();
   restarWithKey = true;
 };
 
@@ -135,10 +138,13 @@ const won = () => {
   clearInterval(counterTimer);
   myCamera.setAttribute("position", "1.180 2.600 -1.359");
   myCamera.setAttribute("rotation", "-8.480 -723.760 0.000");
+  const wonAudio = new Audio("assets/won.mp3");
+  wonAudio.play();
   restarWithKey = true;
 };
 document.onkeydown = (event) => {
   if (restarWithKey) window.location.reload();
+  console.log({ event: event.which });
   if (event.which == 32) {
     shoot();
   }
