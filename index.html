@@ -21,6 +21,56 @@
           id="redDeaD-m"
           src="assets/amongusdead.mtl"
         ></a-asset-item>
+        <!-- 2 -->
+        <a-asset-item id="pink-o" src="assets/amonguspink.obj"></a-asset-item>
+        <a-asset-item id="pink-m" src="assets/amonguspink.mtl"></a-asset-item>
+        <a-asset-item
+          id="pinkDead-o"
+          src="assets/amongusdeadpink.obj"
+        ></a-asset-item>
+        <a-asset-item
+          id="pinkDeaD-m"
+          src="assets/amongusdeadpink.mtl"
+        ></a-asset-item>
+        <!-- 3 -->
+        <a-asset-item id="brown-o" src="assets/amongusbrown.obj"></a-asset-item>
+        <a-asset-item id="brown-m" src="assets/amongusbrown.mtl"></a-asset-item>
+        <a-asset-item
+          id="brownDead-o"
+          src="assets/amongusdeadbrown.obj"
+        ></a-asset-item>
+        <a-asset-item
+          id="brownDeaD-m"
+          src="assets/amongusbrown.mtl"
+        ></a-asset-item>
+        <!-- 4 -->
+        <a-asset-item id="black-o" src="assets/amongusblack.obj"></a-asset-item>
+        <a-asset-item id="black-m" src="assets/amongusblack.mtl"></a-asset-item>
+        <a-asset-item
+          id="blackDead-o"
+          src="assets/amongusdeadblack.obj"
+        ></a-asset-item>
+        <a-asset-item
+          id="blackDeaD-m"
+          src="assets/amongusdeadblack.mtl"
+        ></a-asset-item>
+        <!-- 5 -->
+        <a-asset-item
+          id="yellow-o"
+          src="assets/amongusyellow.obj"
+        ></a-asset-item>
+        <a-asset-item
+          id="yellow-m"
+          src="assets/amongusyellow.mtl"
+        ></a-asset-item>
+        <a-asset-item
+          id="yellowDead-o"
+          src="assets/amongusdeadyellow.obj"
+        ></a-asset-item>
+        <a-asset-item
+          id="yellowDeaD-m"
+          src="assets/amongusdeadyellow.mtl"
+        ></a-asset-item>
       </a-assets>
       <a-entity environment="preset:starry;"></a-entity>
       <a-plane
@@ -65,15 +115,23 @@
         class="target"
         color="white"
         radius="1"
+        id="2"
         geometry="height:3;width:2"
         visible="false"
         position="32.937 0.603 6.121"
       ></a-box>
       <a-entity
-        obj-model="obj: #red-o; mtl: #red-m"
+        obj-model="obj: #pink-o; mtl: #pink-m"
         position="32.937 0.603 6.121"
         rotation="0 0 0"
         id="among2"
+      ></a-entity>
+      <a-entity
+        obj-model="obj: #pinkDead-o; mtl: #pinkDeaD-m"
+        position="32.937 0.603 6.121"
+        rotation="0 0 0"
+        id="amongDead2"
+        visible="false"
       ></a-entity>
       <!-- Among 3 -->
       <a-box
@@ -81,15 +139,23 @@
         class="target"
         color="white"
         radius="1"
+        id="3"
         geometry="height:3;width:2"
         visible="false"
         position="-25.304 3.701 -3.474"
       ></a-box>
       <a-entity
-        obj-model="obj: #red-o; mtl: #red-m"
+        obj-model="obj: #brown-o; mtl: #brown-m"
         position="-25.304 3.701 -3.474"
         rotation="0 -90 0"
         id="among3"
+      ></a-entity>
+      <a-entity
+        obj-model="obj: #brownDead-o; mtl: #brownDeaD-m"
+        position="-25.304 3.701 -3.474"
+        rotation="0 -90 0"
+        id="amongDead3"
+        visible="false"
       ></a-entity>
       <!-- Among 4 -->
       <a-box
@@ -97,15 +163,23 @@
         class="target"
         color="white"
         radius="1"
+        id="4"
         geometry="height:3;width:2"
         visible="false"
         position="-17.076 -0.020 -20.368"
       ></a-box>
       <a-entity
-        obj-model="obj: #red-o; mtl: #red-m"
+        obj-model="obj: #black-o; mtl: #black-m"
         position="-17.076 -0.020 -20.368"
         rotation="0 -90 0"
         id="among4"
+      ></a-entity>
+      <a-entity
+        obj-model="obj: #blackDead-o; mtl: #blackDeaD-m"
+        position="-17.076 -0.020 -20.368"
+        rotation="0 -90 0"
+        id="amongDead4"
+        visible="false"
       ></a-entity>
       <!-- Among 5 -->
       <a-box
@@ -113,33 +187,25 @@
         class="target"
         color="white"
         radius="1"
+        id="5"
         geometry="height:3;width:2"
         visible="false"
         position="43.704 0.603 6.121"
       ></a-box>
       <a-entity
-        obj-model="obj: #red-o; mtl: #red-m"
+        obj-model="obj: #yellow-o; mtl: #yellow-m"
         position="43.704 0.603 6.121"
         rotation="0 -180 0"
         id="among5"
       ></a-entity>
+      <a-entity
+        obj-model="obj: #yellowDead-o; mtl: #yellowDeaD-m"
+        position="43.704 0.603 6.121"
+        rotation="0 -180 0"
+        id="amongDead5"
+        visible="false"
+      ></a-entity>
 
-      <!-- <a-box
-        static-body
-        class="target"
-        color="white"
-        radius="1"
-        heigth="10"
-        position="1.252 1.652 -27.969"
-      ></a-box>
-      <a-box
-        static-body
-        class="target"
-        color="white"
-        radius="1"
-        heigth="10"
-        position="-25.435 4.531 -3.288"
-      ></a-box> -->
       <a-entity
         position="0 8.968 -18.843"
         id="light"

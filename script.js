@@ -24,8 +24,7 @@ const shootCollided = (event) => {
     const id = event.detail.body.el.id;
     const oldAmong = document.getElementById("among" + id);
     const newAmong = document.getElementById("amongDead" + id);
-    console.log(oldAmong);
-    console.log(newAmong);
+
     myScene.removeChild(event.detail.target.el);
     myScene.removeChild(event.detail.body.el);
     myScene.removeChild(oldAmong);
