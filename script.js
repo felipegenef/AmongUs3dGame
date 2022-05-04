@@ -1,4 +1,4 @@
-let currentCounter = 61;
+let currentCounter = 121;
 const counterTimer = setInterval(() => {
   currentCounter--;
   const counterElement = document.getElementById("counter");
