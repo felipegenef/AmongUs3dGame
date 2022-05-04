@@ -165,7 +165,7 @@ document.onkeydown = (event) => {
 
     setTimeout(() => {
       isWalkingAudioOn = false;
-    }, 500);
+    }, 2000);
   }
   if (restarWithKey) window.location.reload();
   if (event.which == 32) {
