@@ -21,8 +21,13 @@ const shootCollided = (event) => {
   } else if (event.detail.body.el.className === "target") {
     console.log("Hit the target!");
     event.detail.target.el.removeEventListener("collide", shootCollided);
+    const id = event.detail.body.el.id;
+    const oldAmong = document.getElementById("among" + id);
+    const newAmong = document.getElementById("amongDead" + id);
     myScene.removeChild(event.detail.target.el);
     myScene.removeChild(event.detail.body.el);
+    myScene.removeChild(oldAmong);
+    newAmong.setAttribute("visible", true);
   }
   if (document.querySelectorAll(".target").length === 0) {
     console.log("You win!");
