@@ -1222,33 +1222,20 @@
         material=""
       ></a-entity
       ><a-entity
-        position="-25.379 18.071 -38.778"
+        position="-25.379 18.071 -38.956"
         id="image"
-        geometry="height:10;width:10"
-        material="color:#e0ce0b"
+        geometry="depth:10;height:10;width:10"
+        material="src:https://felipegenef.github.io/AmongUs3dGame/images/icon.jpg"
         src="#icon"
-      ></a-entity
-      ><a-entity
-        position="-24.743 17.372 -37.625"
-        id="image-2"
-        geometry="height:8;width:6"
-        material="color:#e00b0b"
-        src="#icon"
-      ></a-entity
-      ><a-entity
-        position="-26.7 17.372 -38.043"
-        id="image-3"
-        geometry="height:5;width:6"
-        material="color:#e00b0b"
-        src="#icon"
-      ></a-entity
-      ><a-entity
-        position="-24.115 19.138 -37.142"
-        id="image-4"
-        geometry="height:2;width:4"
-        material="color:#3a96cf"
-        src="#icon"
-      ></a-entity>
+      >
+        <a-animation
+          attribute="rotation"
+          to="0 360 0"
+          repeat="indefinite"
+          dur="10000"
+          easing="linear"
+        ></a-animation>
+      </a-entity>
       <a-entity
         position="0.475 -0.569 -4.67"
         geometry="primitive:cylinder;height:4"
