@@ -1,17 +1,21 @@
 let currentCounter = 121;
 let restarWithKey = false;
 let first = true;
-const counterTimer = setInterval(() => {
-  currentCounter--;
-  const counterElement = document.getElementById("counter");
-  counterElement.setAttribute(
-    "text",
-    `width:50;value:Kill them All in ${currentCounter}s;color:#c19f9f;height:100`
-  );
-  if (currentCounter == 0) {
-    lost();
-  }
-}, 1000);
+const startAudio = new Audio("assets/start.mp3");
+const killAudio = new Audio("assets/kill.mp3");
+const loseAudio = new Audio("assets/lose.mp3");
+const wonAudio = new Audio("assets/won.mp3");
+// const counterTimer = setInterval(() => {
+//   currentCounter--;
+//   const counterElement = document.getElementById("counter");
+//   counterElement.setAttribute(
+//     "text",
+//     `width:50;value:Kill them All in ${currentCounter}s;color:#c19f9f;height:100`
+//   );
+//   if (currentCounter == 0) {
+//     lost();
+//   }
+// }, 1000);
 
 const shoot = () => {
   const bullet = document.createElement("a-sphere");
@@ -42,7 +46,7 @@ const shootCollided = (event) => {
     myScene.removeChild(event.detail.body.el);
     oldAmong.setAttribute("visible", false);
     newAmong.setAttribute("visible", true);
-    const killAudio = new Audio("assets/kill.mp3");
+
     killAudio.play();
   }
   if (document.querySelectorAll(".target").length === 0) {
@@ -92,7 +96,7 @@ const lost = () => {
   clearInterval(counterTimer);
   myCamera.setAttribute("position", "1.180 2.600 -1.359");
   myCamera.setAttribute("rotation", "-8.480 -723.760 0.000");
-  const loseAudio = new Audio("assets/lose.mp3");
+
   loseAudio.play();
   restarWithKey = true;
 };
@@ -140,7 +144,7 @@ const won = () => {
   clearInterval(counterTimer);
   myCamera.setAttribute("position", "1.180 2.600 -1.359");
   myCamera.setAttribute("rotation", "-8.480 -723.760 0.000");
-  const wonAudio = new Audio("assets/won.mp3");
+
   wonAudio.play();
   restarWithKey = true;
 };
@@ -148,7 +152,7 @@ let isWalkingAudioOn = false;
 document.onkeydown = (event) => {
   if (first) {
     first = false;
-    const startAudio = new Audio("assets/start.mp3");
+
     startAudio.play();
   }
 
