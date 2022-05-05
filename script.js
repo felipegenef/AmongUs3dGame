@@ -16,7 +16,10 @@ const wonAudio = new Audio("assets/won.mp3");
 //     lost();
 //   }
 // }, 1000);
-
+let currentPosition = "0 1 0";
+myCamera.addEventListener("collide", (event) => {
+  console.log(event);
+});
 const shoot = () => {
   const bullet = document.createElement("a-sphere");
   let pos = myCamera.getAttribute("position");
@@ -150,6 +153,7 @@ const won = () => {
 };
 let isWalkingAudioOn = false;
 document.onkeydown = (event) => {
+  console.log(event);
   if (first) {
     first = false;
 
