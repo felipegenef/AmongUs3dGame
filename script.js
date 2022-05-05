@@ -5,17 +5,17 @@ const startAudio = new Audio("assets/start.mp3");
 const killAudio = new Audio("assets/kill.mp3");
 const loseAudio = new Audio("assets/lose.mp3");
 const wonAudio = new Audio("assets/won.mp3");
-// const counterTimer = setInterval(() => {
-//   currentCounter--;
-//   const counterElement = document.getElementById("counter");
-//   counterElement.setAttribute(
-//     "text",
-//     `width:50;value:Kill them All in ${currentCounter}s;color:#c19f9f;height:100`
-//   );
-//   if (currentCounter == 0) {
-//     lost();
-//   }
-// }, 1000);
+const counterTimer = setInterval(() => {
+  currentCounter--;
+  const counterElement = document.getElementById("counter");
+  counterElement.setAttribute(
+    "text",
+    `width:50;value:Kill them All in ${currentCounter}s;color:#c19f9f;height:100`
+  );
+  if (currentCounter == 0) {
+    lost();
+  }
+}, 1000);
 let currentPosition = "0 1 0";
 myCamera.addEventListener("collide", (event) => {
   console.log(event);
