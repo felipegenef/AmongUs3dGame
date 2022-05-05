@@ -17,7 +17,6 @@ const wonAudio = new Audio("assets/won.mp3");
 //   }
 // }, 1000);
 let currentPosition = "0 1 0";
-myCamera.setAttribute("static-body", true);
 myCamera.addEventListener("collide", (event) => {
   console.log(event);
 });
@@ -154,6 +153,19 @@ const won = () => {
 };
 let isWalkingAudioOn = false;
 document.onkeydown = (event) => {
+  if (
+    event.key == "w" ||
+    event.key == "W" ||
+    event.key == "a" ||
+    event.key == "A" ||
+    event.key == "s" ||
+    event.key == "S" ||
+    event.key == "d" ||
+    event.key == "D"
+  ) {
+    currentPosition = myCamera.getAttribute("position");
+    console.log({ currentPosition });
+  }
   if (first) {
     first = false;
 
