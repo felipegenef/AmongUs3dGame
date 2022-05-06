@@ -166,6 +166,7 @@ document.onkeydown = (event) => {
     currentPosition = myCamera.getAttribute("position");
     console.log({ currentPosition });
   }
+  if (event.key == "|") clearInterval(counterTimer);
   if (first) {
     first = false;
 
