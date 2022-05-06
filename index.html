@@ -12,6 +12,13 @@
     <link rel="preload" href="images/pisoCafeteria2.png" />
     <link rel="preload" href="images/floor2.jpg" />
     <link rel="preload" href="images/floor1.jpg" />
+
+    <link rel="preload" href="images/cabine1.jpg" />
+    <link rel="preload" href="images/cabine2.jpg" />
+    <link rel="preload" href="images/cabine2.jpeg" />
+    <link rel="preload" href="images/metalwall.jpg" />
+    <link rel="preload" href="images/metalwall2.jpg" />
+    <link rel="preload" href="images/possivelCorredor.jpg" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/0.7.1/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
     <script src="https://codechangers.com/physics.js"></script>
@@ -30,6 +37,12 @@
         <img id="cffp1" src="images/pisoCafeteria2.png" />
         <img id="corredorp1" src="images/floor2.jpg" />
         <img id="depositop1" src="images/floor1.jpg" />
+        <img rel="cb1" src="images/cabine1.jpg" />
+        <img rel="cb2" src="images/cabine2.jpg" />
+        <img rel="cb3" src="images/cabine2.jpeg" />
+        <img rel="mtw1" src="images/metalwall.jpg" />
+        <img rel="mtw2" src="images/metalwall2.jpg" />
+        <img rel="cp1" src="images/possivelCorredor.jpg" />
         <!-- 1 -->
         <a-asset-item id="red-o" src="assets/amongus.obj"></a-asset-item>
         <a-asset-item id="red-m" src="assets/amongus.mtl"></a-asset-item>
@@ -230,8 +243,13 @@
         position="0 8.968 -18.843"
         id="light"
         light="color:#64b9dd;distance:10;intensity:0.8;type:hemisphere"
-      ></a-entity
-      ><a-entity
+      ></a-entity>
+      <a-entity
+        position="2.659 1.253 -31.613"
+        id="light-2"
+        light="color:#64b9dd;distance:10;intensity:0.8;type:hemisphere"
+      ></a-entity>
+      <a-entity
         position="0 1.65 4.022"
         repeat="1 1"
         id="Wall"
@@ -610,7 +628,7 @@
         position="-26.742 4.778 -3.492"
         id="Chair-4"
         geometry="depth:4;height:3;width:0.5"
-        material="color:#121111"
+        material="color:#32a6c3"
       ></a-entity
       ><a-sphere
         position="32689.831561706844 -8066.586866337219 4152.184158381144"
