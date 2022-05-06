@@ -20,6 +20,7 @@
     <link rel="preload" href="images/metalwall2.jpg" />
     <link rel="preload" href="images/possivelCorredor.jpg" />
     <link rel="preload" href="images/corredorw.jpg" />
+    <link rel="preload" href="images/depw.jpg" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/0.7.1/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
     <script src="https://codechangers.com/physics.js"></script>
@@ -45,6 +46,7 @@
         <img id="mtw2" src="images/metalwall2.jpg" />
         <img id="cp1" src="images/possivelCorredor.jpg" />
         <img id="cp2" src="images/corredorw.jpg" />
+        <img id="depw" src="images/depw.jpg" />
         <!-- 1 -->
         <a-asset-item id="red-o" src="assets/amongus.obj"></a-asset-item>
         <a-asset-item id="red-m" src="assets/amongus.mtl"></a-asset-item>
@@ -262,7 +264,15 @@
         position="8.758 1.65 -19.054"
         repeat="1 1"
         id="Wall-12"
-        material="color:#7b939d"
+        rotation="0 90 0"
+        material="color:#7b939d;src:#depw"
+        geometry="height:4;width:9"
+      ></a-entity
+      ><a-entity
+        position="13.363 1.65 -24.112"
+        repeat="1 1"
+        id="Wall-38"
+        material="color:#7b939d;src:#depw"
         geometry="height:4;width:9"
       ></a-entity
       ><a-entity
@@ -412,7 +422,7 @@
         rotation="0 90 0"
         repeat="1 1"
         id="Wall-14"
-        material="color:#7b939d"
+        material="color:#7b939d;src:#depw"
         geometry="height:4;width:10"
       ></a-entity
       ><a-entity
